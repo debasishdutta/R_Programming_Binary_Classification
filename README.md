@@ -35,64 +35,63 @@ Steps For Execution:
 2. Import the data in to a R data frame (df_name). Kindly ensure the dependent variable is stored as factor data type and all the independent variable are stored as numeric data type. 
 3. Execute the below commands: 
 
-df_name <- iris 
+  df_name <- iris 
 
-dep_var <- "Species" 
+  dep_var <- "Species" 
 
-n_cv <- 5 
+  n_cv <- 5 
 
-n_repeats <- 2 
+  n_repeats <- 2 
 
-seed <- 1234 
+  seed <- 1234 
 
-source("Linear Support Vector.R") 
+  source("Linear Support Vector.R") 
 
-source("Neural Network_Classification.R") 
+  source("Neural Network_Classification.R") 
 
-source("Polynomial Support Vector.R") 
+  source("Polynomial Support Vector.R") 
 
-source("Radial Support Vector.R") 
+  source("Radial Support Vector.R") 
 
-source("Random Forest.R") 
+  source("Random Forest.R") 
 
-source("Stocasting Gradient Boosting.R") 
+  source("Stocasting Gradient Boosting.R") 
 
-source("Stocasting Adaptive Boosting.R") 
+  source("Stocasting Adaptive Boosting.R") 
 
-source("Naive Bayes Classifier.R") 
+  source("Naive Bayes Classifier.R") 
 
-x1 <- model_linear_svm(df_name, dep_var, n_cv, n_repeats, seed) 
+  x1 <- model_linear_svm(df_name, dep_var, n_cv, n_repeats, seed) 
 
-x1_pred <- predict(x1, df_name[,-5], type="prob") 
+  x1_pred <- predict(x1, df_name[,-5], type="prob") 
 
-x2 <- model_neural_network(df_name, dep_var, n_cv, n_repeats, seed) 
+  x2 <- model_neural_network(df_name, dep_var, n_cv, n_repeats, seed) 
 
-x2_pred <- predict(x2, df_name[,-5], type="raw") 
+  x2_pred <- predict(x2, df_name[,-5], type="raw") 
 
-x3 <- model_polynomial_svm(df_name, dep_var, n_cv, n_repeats, seed) 
+  x3 <- model_polynomial_svm(df_name, dep_var, n_cv, n_repeats, seed) 
 
-x3_pred <- predict(x3, df_name[,-5], type="prob") 
+  x3_pred <- predict(x3, df_name[,-5], type="prob") 
 
-x4 <- model_radial_svm(df_name, dep_var, n_cv, n_repeats, seed) 
+  x4 <- model_radial_svm(df_name, dep_var, n_cv, n_repeats, seed) 
 
-x4_pred <- predict(x4, df_name[,-5], type = c("prob")) 
+  x4_pred <- predict(x4, df_name[,-5], type = c("prob")) 
 
-x5 <- model_rf(df_name, dep_var, n_cv, n_repeats, seed) 
+  x5 <- model_rf(df_name, dep_var, n_cv, n_repeats, seed) 
 
-x5_pred <- predict(x5, df_name[,-5], type = c("prob")) 
+  x5_pred <- predict(x5, df_name[,-5], type = c("prob")) 
 
-x6 <- model_gbm(df_name, dep_var, n_cv, n_repeats, seed) 
+  x6 <- model_gbm(df_name, dep_var, n_cv, n_repeats, seed) 
 
-x6_pred <- predict(x6, df_name[,-5], n.trees= x6$n.trees, type = 'response') 
+  x6_pred <- predict(x6, df_name[,-5], n.trees= x6$n.trees, type = 'response') 
 
-x7 <- model_ada_boost(df_name, dep_var, n_cv, n_repeats, seed) 
+  x7 <- model_ada_boost(df_name, dep_var, n_cv, n_repeats, seed) 
 
-x7_pred <- predict(x7, df_name[,-5], type = c("prob")) 
+  x7_pred <- predict(x7, df_name[,-5], type = c("prob")) 
 
-x8 <- model_naive_bayes(df_name, dep_var, n_cv, n_repeats, seed) 
+  x8 <- model_naive_bayes(df_name, dep_var, n_cv, n_repeats, seed) 
 
-x8_pred <- as.data.frame(predict(x8, df_name[,-5], type = c("raW"))$posterior) 
-
+  x8_pred <- as.data.frame(predict(x8, df_name[,-5], type = c("raW"))$posterior) 
 
 
 Compatibility: 
