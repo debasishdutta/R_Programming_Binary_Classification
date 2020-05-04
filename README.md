@@ -29,10 +29,12 @@ Note:
 3. The dependent variable should be of factor data type. 
 4. Depending on the size of the modelling data, the algorithm can take large time to be completely executed. Third and fourth parameter should be chosen carefully. 
 
-Steps For Execution: 
+Steps For Execution:
+
 1. Copy the code file to the current working directory of R session. 
 2. Import the data in to a R data frame (df_name). Kindly ensure the dependent variable is stored as factor data type and all the independent variable are stored as numeric data type. 
 3. Execute the below commands: 
+
 df_name <- iris 
 dep_var <- "Species" 
 n_cv <- 5 
