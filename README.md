@@ -37,8 +37,8 @@ df_name <- iris
 dep_var <- "Species" 
 n_cv <- 5 
 n_repeats <- 2 
-seed <- 1234 
-source("Linear Support Vector.R") 
+seed <- 1234 s
+ource("Linear Support Vector.R") 
 source("Neural Network_Classification.R") 
 source("Polynomial Support Vector.R") 
 source("Radial Support Vector.R") 
@@ -60,7 +60,7 @@ x6 <- model_gbm(df_name, dep_var, n_cv, n_repeats, seed)
 x6_pred <- predict(x6, df_name[,-5], n.trees= x6$n.trees, type = 'response') 
 x7 <- model_ada_boost(df_name, dep_var, n_cv, n_repeats, seed) 
 x7_pred <- predict(x7, df_name[,-5], type = c("prob")) 
-x8 <- model_naive_bayes(df_name, dep_var, n_cv, n_repeats, seed) 
+x8 <- model_naive_bayes(df_name, dep_var, n_cv, n_repeats, seed)
 x8_pred <- as.data.frame(predict(x8, df_name[,-5], type = c("raW"))$posterior) 
 
 Compatibility: 
