@@ -1,5 +1,5 @@
-# R_Programming_Binary_Classification
-Binary Classification Machine Learning Models In R Programming
+# R_Programming_Classification_ML_Models
+Binary/ Multi-Class Classification Machine Learning Models In R Programming
 
 Disclaimer: 
 This code snippet is developed with an intension for generic use only. I hereby declare that the code was not part of any of my professional development work. Also, no sensitive or confidential data sources are used for this development. 
